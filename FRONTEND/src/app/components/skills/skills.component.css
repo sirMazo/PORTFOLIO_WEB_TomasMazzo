@@ -1,0 +1,326 @@
+/* COLORES PERSONALIZADOS */
+
+/* PROGRAMACION */
+.html {
+    color: #e44f26;
+    --bg-color: #e44f26;
+    --bg-color-light: #ffd4c8;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(255, 215, 97, 0.48);
+}
+  
+.css {
+    color: #1673b6;
+    --bg-color: #1673b6;
+    --bg-color-light: #cdeaff;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+  
+.js {
+    color: #f8de1a;
+    --bg-color: #f8de1a;
+    --bg-color-light: #fff8c7;
+    --text-color-hover: #252A2E;
+    --box-shadow-color: rgba(252, 255, 189, 0.762);
+}
+
+.python{ 
+    color: #306998;
+    --bg-color: #306998;
+    --bg-color-light: #FFD43B;
+    --text-color-hover: #FFD43B;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+
+.git {
+    color: #df4d36;
+    --bg-color: #df4d36;
+    --bg-color-light: #ffe4e0;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(255, 202, 152, 0.48);
+}
+
+.angular {
+    color: #B52E31;
+    --bg-color: #B52E31;
+    --bg-color-light: #ffe4e0;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(255, 202, 152, 0.48);
+}
+
+.c {
+    color: #5B6ABE;
+    --bg-color: #5B6ABE;
+    --bg-color-light: #fff;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+
+
+/* DISEÑO */
+.ps {
+    color: #31A8FF;
+    --bg-color: #001E36;
+    --bg-color-light: #001E36;
+    --text-color-hover: #31A8FF;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+
+.ill {
+    color: #f8a829;
+    --bg-color: #3c240c;
+    --bg-color-light: #3c240c;
+    --text-color-hover: #f8a829;
+    --box-shadow-color: rgba(252, 255, 189, 0.762);
+}
+
+.ae {
+    color: #CF96FD;
+    --bg-color: #393665;
+    --bg-color-light: #CF96FD;
+    --text-color-hover: #CF96FD;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+
+.lr {
+    color: #31A8FF;
+    --bg-color: #001E36;
+    --bg-color-light: #001E36;
+    --text-color-hover: #31A8FF;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+/* OFFICE */
+
+.excel{
+    color: #1D6F42;
+    --bg-color: #1D6F42;
+    --bg-color-light: #1D6F42;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+
+.word{
+    color: #103f91;
+    --bg-color: #103f91;
+    --bg-color-light: #103f91;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+
+.pp{
+    color: #D04423;
+    --bg-color: #D04423;
+    --bg-color-light: #D04423;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+
+.outlook{
+    color: #0072c6;
+    --bg-color: #0072c6;
+    --bg-color-light: #0072c6;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(188, 221, 255, 0.48);
+}
+
+
+/* GENERAL CONFIG */
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+.content {
+    opacity: 0;
+}
+  
+.content.in {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+  
+.content.out {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+button {
+    font-size: 20px;
+    text-decoration: underline;
+    background-color: #1e2326;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+}button:hover {
+    background-color: #252A2E;
+    transform: translateY(-2px);
+}
+
+.buttons{
+text-align: center;
+}
+  
+
+h2{
+    font-size: 48px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+h3{
+    font-size: 38px;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.columna {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* CARDS CONFIG Y SU ESTILO */
+.card {
+    max-width: calc(33.33% - 6px);
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    font-size: 90px;
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    background: #252A2E;
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s ;
+}
+
+.card:active {
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 15px 24px rgba(0, 0, 0, 0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.card:hover {
+    color: var(--text-color-hover);
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+}
+
+
+/* NOMBRE DE LA TECNOLOGIA */
+
+.name {
+    font-size: 17px;
+    margin-top: 10px;
+    color: #ffff;
+    transition: transform 0.5s ease-out;
+}
+
+.card:hover .name {
+    color: #252A2E;
+    display: none;
+}
+
+/* CANTIDAD DEL PORCENTAJE POR DEBAJO DE LA BARRA */
+
+.porcentaje{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffff;
+    display: none;
+    transition: transform 0.5s ease-out;
+}
+
+.card:hover .porcentaje {
+    color: var(--text-color-hover);
+    display: block;
+}
+
+
+/* ESTILO Y CONFIG DEL PORCENTAJE */
+
+.progress-bar{
+    margin-bottom: 55px;
+    width: 190px;
+    height: 190px;
+    visibility: hidden;
+    position: fixed;
+}
+
+.card:hover .progress-bar{
+    visibility:visible;
+}
+
+
+/* CIRCULO BLANCO DETRAS DEL LOGO */
+.circulo {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background-color: #fff;
+    border: 3px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .circulo{
+    background-color: var(--bg-color) ;
+    border: transparent ;
+}
+
+
+/* COBERTURA DETRAS DEL LOGO - EXPANDE */
+.cor__cobertura {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 60px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    position: absolute;
+    z-index: -1;
+    transition: transform 0.2s ease-out;
+}
+.card:hover .cor__cobertura {
+    width: 100%;
+    height: 100%;
+    transform: scale(7) translateZ(0);
+}
+
+
+/* ESTILO DESVANECES EN PROGRESS BAR */
+
+.tap{
+    width: 100%;
+    height: 100%;
+    background: #252A2E;
+    position: absolute;
+    z-index: -1;
+    transition:  0.2s ;
+}
+
+.card:hover .tap {
+    background-color: transparent ;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    .progress-bar{
+        width: 150px;
+        height: 150px;
+    }    
+    
+    .circulo {
+        width: 140px;
+        height: 140px;
+    }
+}

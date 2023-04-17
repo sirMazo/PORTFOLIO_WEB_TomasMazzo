@@ -1,0 +1,25 @@
+<section id="portafolio" class="fondo">
+  <h1>Proyectos</h1>
+  <p class="info">Este es un espacio donde muestro los proyectos en los que participé, mis proyectos realizados y los que se encuentran en progreso.</p>
+  <div class="cards">
+    <div class="card" *ngFor="let card of cards; let i = index" 
+      [style.background-image]="card.backgroundImage"
+      [ngClass]="{ 'active': i === currentCard }" 
+      (click)="selectCard(i)" 
+      [attr.data-card-index]="i">
+      <h2>{{ card.title }}</h2>
+    </div>
+  </div>
+
+  <div class="card-info" *ngIf="currentCard >= 0">
+    <p>{{ cards[currentCard].content }}</p>
+  </div>
+    
+  <!--  <p class="card-counter" *ngIf="currentCard >= 0">{{ currentCard + 1 }} de {{ cards.length }}</p>
+    
+
+  <div class="arrows" >
+      <button (click)="prevCard($event)">&lt;</button>
+      <button (click)="nextCard($event)">&gt;</button>
+    </div>-->
+</section>

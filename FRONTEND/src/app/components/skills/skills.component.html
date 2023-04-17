@@ -1,0 +1,384 @@
+<h2>Conocimientos</h2>
+
+<div class="buttons">
+    <button (click)="showContent(1)">Programación</button>
+    <button (click)="showContent(2)">Diseño</button>
+    <button (click)="showContent(3)">Office</button>
+</div>
+  
+<div class="content" [@fadeInOut]="show ? 'in' : 'out'">
+    <div *ngIf="content == 1">
+
+        <div class="columna">
+            <div class="card html">
+                <div class="cor__cobertura"></div>
+                <div class="circulo"><i class="fa-brands fa-html5"></i></div>
+                <p class="name">HTML</p>
+                <p class="porcentaje">90%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="90"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#ffffff'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+        
+            <div class="card css">
+                <div class="cor__cobertura"></div>
+                <div class="circulo"><i class="fa-brands fa-css3-alt"></i></div>
+                <p class="name">CSS</p>
+                <p class="porcentaje">82%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="82"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#ffffff'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+        
+            <div class="card js">
+                <div class="cor__cobertura"></div>
+                <div class="circulo"><i class="fa-brands fa-square-js"></i></div>
+                <p class="name">JavaScript</p>
+                <p class="porcentaje">45%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="40"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#252A2E'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+        
+            <div class="card python">
+                <div class="cor__cobertura"></div>
+                <div class="circulo"><i class="fa-brands fa-python"></i></div>
+                <p class="name">Python</p>
+                <p class="porcentaje">55%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="40"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#FFD43B'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+        
+            <div class="card git">
+                <div class="cor__cobertura"></div>
+                <div class="circulo"><i class="fa-brands fa-git-alt"></i></div>
+                <p class="name">Git & GitHub</p>
+                <p class="porcentaje">35%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="35"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#ffffff'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+
+            <div class="card angular">
+                <div class="cor__cobertura"></div>
+                <div class="circulo"><i class="fa-brands fa-angular"></i></div>
+                <p class="name">Angular</p>
+                <p class="porcentaje">40%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="40"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#ffffff'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+
+            <div class="card c">
+                <div class="cor__cobertura"></div>
+                <div class="circulo"><i class="fa-solid fa-c"></i></div>
+                <p class="name">C</p>
+                <p class="porcentaje">85%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="85"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#ffffff'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+        </div>
+    </div>
+  
+    <div *ngIf="content == 2">
+
+        <div class="columna">
+            <div class="card ps">
+                <div class="cor__cobertura"></div>
+                <div class="circulo">Ps</div>
+                <p class="name">Adobe Photoshop</p>
+                <p class="porcentaje">80%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="80"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#31A8FF'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+        
+            <div class="card ill">
+                <div class="cor__cobertura"></div>
+                <div class="circulo">Ai</div>
+                <p class="name">Adobe Ilustrator</p>
+                <p class="porcentaje">70%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="70"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#f8a829'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+            
+            <div class="card ae">
+                <div class="cor__cobertura"></div>
+                <div class="circulo">Ae</div>
+                <p class="name">Adobe After Effects</p>
+                <p class="porcentaje">30%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="30"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#CF96FD'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+            
+            <div class="card lr">
+                <div class="cor__cobertura"></div>
+                <div class="circulo">Lr</div>
+                <p class="name">Adobe Lightroom</p>
+                <p class="porcentaje">50%</p>
+                <div class="tap"></div>
+                <circle-progress
+                    class="progress-bar"
+                    [percent]="50"
+                    [maxPercent]="100"
+                    [radius]="100"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showBackground]="false"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#31A8FF'"
+                    [animation]="true"
+                    [animationDuration]="500"
+                    [responsive]="true"
+                ></circle-progress>
+            </div>
+        </div>
+    </div>
+   
+    <div *ngIf="content == 3">
+        
+        <div class="columna">
+                <div class="card excel">
+                    <div class="cor__cobertura"></div>
+                    <div class="circulo"><i class="fa-solid fa-file-excel"></i></div>
+                    <p class="name">Microsoft Excel</p>
+                    <p class="porcentaje">100%</p>
+                    <div class="tap"></div>
+                    <circle-progress
+                        class="progress-bar"
+                        [percent]="100"
+                        [maxPercent]="100"
+                        [radius]="100"
+                        [showUnits]="false"
+                        [showTitle]="false"
+                        [showSubtitle]="false"
+                        [showBackground]="false"
+                        [outerStrokeWidth]="16"
+                        [innerStrokeWidth]="0"
+                        [outerStrokeColor]="'#ffffff'"
+                        [animation]="true"
+                        [animationDuration]="500"
+                        [responsive]="true"
+                    ></circle-progress>
+                </div>
+            
+                <div class="card word">
+                    <div class="cor__cobertura"></div>
+                    <div class="circulo"><i class="fa-solid fa-file-word"></i></div>
+                    <p class="name">Microsoft Word</p>
+                    <p class="porcentaje">90%</p>
+                    <div class="tap"></div>
+                    <circle-progress
+                        class="progress-bar"
+                        [percent]="90"
+                        [maxPercent]="100"
+                        [radius]="100"
+                        [showUnits]="false"
+                        [showTitle]="false"
+                        [showSubtitle]="false"
+                        [showBackground]="false"
+                        [outerStrokeWidth]="16"
+                        [innerStrokeWidth]="0"
+                        [outerStrokeColor]="'#ffffff'"
+                        [animation]="true"
+                        [animationDuration]="500"
+                        [responsive]="true"
+                    ></circle-progress>
+                </div>
+                
+                <div class="card pp">
+                    <div class="cor__cobertura"></div>
+                    <div class="circulo"><i class="fa-solid fa-file-powerpoint"></i></div>
+                    <p class="name">Microsoft Powerpoint</p>
+                    <p class="porcentaje">90%</p>
+                    <div class="tap"></div>
+                    <circle-progress
+                        class="progress-bar"
+                        [percent]="90"
+                        [maxPercent]="100"
+                        [radius]="100"
+                        [showUnits]="false"
+                        [showTitle]="false"
+                        [showSubtitle]="false"
+                        [showBackground]="false"
+                        [outerStrokeWidth]="16"
+                        [innerStrokeWidth]="0"
+                        [outerStrokeColor]="'#ffffff'"
+                        [animation]="true"
+                        [animationDuration]="500"
+                        [responsive]="true"
+                    ></circle-progress>
+                </div>
+                
+                <div class="card outlook">
+                    <div class="cor__cobertura"></div>
+                    <div class="circulo"><i class="fa-solid fa-envelopes-bulk"></i></div>
+                    <p class="name">Microsoft Outlook</p>
+                    <p class="porcentaje">100%</p>
+                    <div class="tap"></div>
+                    <circle-progress
+                        class="progress-bar"
+                        [percent]="100"
+                        [maxPercent]="100"
+                        [radius]="100"
+                        [showUnits]="false"
+                        [showTitle]="false"
+                        [showSubtitle]="false"
+                        [showBackground]="false"
+                        [outerStrokeWidth]="16"
+                        [innerStrokeWidth]="0"
+                        [outerStrokeColor]="'#ffffff'"
+                        [animation]="true"
+                        [animationDuration]="500"
+                        [responsive]="true"
+                    ></circle-progress>
+                </div>
+        </div>
+    </div>
+</div>
