@@ -7,7 +7,8 @@ import { Component, HostListener } from '@angular/core';
 })
 export class ProyectosComponent {
   cards = [
-    {
+    { 
+      
       title: 'Red Social Simple',
       content: 'Contenido de la tarjeta 1',
       backgroundImage: 'url(../../../assets/images/proyectos/red-social.jpg)'
@@ -25,7 +26,7 @@ export class ProyectosComponent {
   ];
 
   currentCard = -1;
-  cardText = '  ';
+  //cardText = '  ';
   
   @HostListener('document:click', ['$event.target'])
   onClick(targetElement: HTMLElement) {
@@ -33,7 +34,7 @@ export class ProyectosComponent {
     const isClickedInside = card?.classList.contains('card');
     if (isClickedInside) {
       this.currentCard = +card?.getAttribute('data-card-index')!;
-      this.setCardText();
+      //this.setCardText();
     } else {
       this.currentCard = -1;
     }
@@ -41,7 +42,7 @@ export class ProyectosComponent {
 
   selectCard(index: number) {
     this.currentCard = index;
-    this.setCardText();
+    //this.setCardText();
   
     // Agrega un retardo de 100ms antes de mostrar el contenido de la tarjeta
     setTimeout(() => {
@@ -63,6 +64,9 @@ export class ProyectosComponent {
     }, 100);
   }
 
+  /*    ESTOS MÉTODOS MUESTRAN EL NUMERO DE LA CARD, INUTIL SI SON POCAS CARTAS
+        LO DEJO PARA EL FUTURO
+        
   prevCard(event: Event) {
     event.stopPropagation();
     this.currentCard = (this.currentCard === 0 || this.currentCard === -1) ? (this.cards.length - 1) : (this.currentCard - 1);
@@ -82,7 +86,7 @@ export class ProyectosComponent {
       this.cardText = "";
     }
   }
-
+*/
 
 
 }

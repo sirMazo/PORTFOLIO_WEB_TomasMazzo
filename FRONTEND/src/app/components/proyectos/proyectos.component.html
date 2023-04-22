@@ -14,10 +14,13 @@
   <div class="card-info" *ngIf="currentCard >= 0">
     <p>{{ cards[currentCard].content }}</p>
   </div>
-    
-  <!--  <p class="card-counter" *ngIf="currentCard >= 0">{{ currentCard + 1 }} de {{ cards.length }}</p>
-    
+  <div class="card-info" *ngIf="currentCard < 0 || currentCard >= cards.length">
+    <p>Selecciona un proyecto para ver su información.</p>
+  </div>    
 
+  <!--  ESTRUCTURA DEL MOSTRAR NUMERO DE LA CARTA, LO DEJO PARA EL FUTURO
+  <p class="card-counter" *ngIf="currentCard >= 0">{{ currentCard + 1 }} de {{ cards.length }}</p>
+    
   <div class="arrows" >
       <button (click)="prevCard($event)">&lt;</button>
       <button (click)="nextCard($event)">&gt;</button>

@@ -62,15 +62,16 @@ img{
 }
   
   .card.active {
-    transform: scale(1.2);
+    transform: scale(1.14);
     margin: 45px;
   }
 
-  .card:hover {
-    transform: scale(1.1);
+  .card:not(.active):hover {
+    transform: scale(1.09);
     margin: 25px;
   }
   
+
   .card h2 {
     color: #fff;
     font-size: 33px;
@@ -101,8 +102,6 @@ img{
     margin-top: 80px;
     padding-bottom: 40px;
     text-align: center;
-    opacity: 0;
-    visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 
@@ -115,11 +114,12 @@ img{
     transition: opacity 0.5s ease, visibility 0.5s ease;
   }*/
 
-  .card-info.visible
-/*.card-counter.visible*/ {
+  /*.card-info.visible
+.card-counter.visible {
   opacity: 1;
   visibility: visible;
 }
+*/
 
   .normal {
     color: black;
@@ -153,6 +153,10 @@ img{
     width: 200px;
     height: 90px;
   }
+  
+  .card.active {
+    margin: 20px;
+  }
 
   .card h2 {
     font-size: 23px;
@@ -170,18 +174,12 @@ img{
 }
 
 @media screen and (max-width: 500px) {
-  .card {
-    width: 130px;
-    height: 75px;
-    margin: 4px;
-  }
   .card.active {
-    transform: scale(1.2);
-    margin: 25px;
+    margin: 20px;
   }
 
   .card h2 {
-    font-size: 13px;
+    font-size: 18px;
     margin-top: 30px;
   }
 
