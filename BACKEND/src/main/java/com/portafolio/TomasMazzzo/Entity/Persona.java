@@ -22,14 +22,18 @@ public class Persona {
     private Long id;
     
     @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud!!! ")
+    @Size(min = 1, max = 50, message = "El nombre no cumple con la longitud. ")
     private String nombre;
     
     @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud!!! ")
+    @Size(min = 1, max = 50, message = "El apellido no cumple con la longitud. ")
     private String apellido;
     
-    @Size(min = 1, max = 50, message = "No cumple con la longitud!!! ")
+    @NotNull
+    @Size(min = 1, max = 50, message = "El titulo no cumple con la longitud. ")
+    private String titulo;
+    
+    @Size(min = 1, max = 50, message = "La img no cumple con la longitud. ")
     private String img;
     
     

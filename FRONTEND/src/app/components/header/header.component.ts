@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit{
   password!: string;
   roles: string[] = [];
   errMsj!: string;
-  loginSucces: boolean = false;
 
   constructor(
     private elementRef: ElementRef,
@@ -48,7 +47,7 @@ export class HeaderComponent implements OnInit{
       this.tokenService.setUserName(data.nombreUsuario);
       this.tokenService.setAuthorities(data.authorities);
       this.roles = data.authorities;
-      this.loginSucces = true;
+      window.location.reload();
       this.router.navigate(['']);
     }, err =>{
       this.isLogged = false;

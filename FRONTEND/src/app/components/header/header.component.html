@@ -30,14 +30,14 @@
     </button>
 
     <!-- BOTON LOGIN -->
-    <div *ngIf="!loginSucces">
+    <div *ngIf="!isLogged">
       <button type="button" class="btn login primer" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas">
         Iniciar sesión
       </button>
     </div>
-    <div *ngIf="loginSucces">
-      <button type="button" class="btn login primer" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas">
-        Mi sesión
+    <div *ngIf="isLogged">
+      <button type="button" class="btn login primer" (click)="onLogOut()">
+        Cerrar sesión
       </button>
     </div>
   </div>
@@ -52,7 +52,7 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
   </div>
   <!-- OFFCANVAS BODY -->
-  <div *ngIf="!loginSucces" class="offcanvas-body">
+  <div *ngIf="!isLogged" class="offcanvas-body">
 
 
     <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
@@ -83,9 +83,8 @@
 
 
   </div>
-  <div *ngIf="loginSucces" class="offcanvas-body">
-    <label for="nombreUsuario" class="form-label">Sesión iniciada!</label>
-    <button class="btn btn-primary w-100 mb-3 text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar">Cerrar</button>
+  <div *ngIf="isLogged" class="offcanvas-body">
+    <label for="nombreUsuario" class="form-label">Sesión iniciada correctamente!</label>
     <button class="btn btn-danger w-100 mb-3 text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar" (click)="onLogOut()">Cerrar sesión</button>
 
   </div>
