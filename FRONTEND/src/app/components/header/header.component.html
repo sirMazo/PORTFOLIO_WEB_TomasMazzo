@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+<nav [ngClass]="{'navbar-scroll': isNavbarFixed, 'navbar-fixed-top': !isNavbarFixed}" class="navbar" #navbar>
   <div class="container-fluid">
 
     <!-- LOGO -->
@@ -7,8 +7,7 @@
     </a>
     
     <!-- 4 OPCIONES -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav flex-row primer">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Inicio</a>
         </li>
@@ -22,10 +21,9 @@
           <a class="nav-link" href="#portafolio">Portafolio</a>
         </li>
       </ul>
-    </div>
     
     <!-- BOTÓN RESPONSIVE -->
-    <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+    <button class="navbar-toggler ms-auto me-2 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -40,8 +38,8 @@
         Cerrar sesión
       </button>
     </div>
-  </div>
 
+  </div>
 </nav>
 
 
@@ -127,9 +125,14 @@
   <!-- OFFCANVAS FOOTER-->
   <div class="offcanvas-footer">
     <!-- BOTON LOGIN -->
-    <div class="d-flex ms-auto">
+    <div *ngIf="!isLogged">
       <button type="button" class="btn login" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas">
         Iniciar sesión
+      </button>
+    </div>
+    <div *ngIf="isLogged">
+      <button type="button" class="btn login" (click)="onLogOut()">
+        Cerrar sesión
       </button>
     </div>
 

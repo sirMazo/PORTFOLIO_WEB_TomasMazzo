@@ -13,6 +13,7 @@ import { TokenService } from 'src/app/services/token.service';
 
 export class EstudiosComponent implements OnInit {
   expe: Experiencia[] = []; 
+  showAlert = false;
 
   constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService){ }
 
@@ -30,5 +31,22 @@ export class EstudiosComponent implements OnInit {
 
   cargarExperiencia(): void{
     this.sExperiencia.lista().subscribe(data => {this.expe =data;})
+  }
+
+  delete(id?: number){
+    if(id != undefined){
+      this.sExperiencia.delete(id).subscribe(
+        data => {
+          this.cargarExperiencia();
+          this.showAlert = true;
+        }, err => {
+          alert("No se pudo borrrar la experiencia laboral.");
+        }
+      )
+    }
+  }
+  
+  closeAlert() {
+    this.showAlert = false; // ocultamos la alerta cuando el usuario la cierra
   }
 }

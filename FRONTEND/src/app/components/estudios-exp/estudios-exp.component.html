@@ -63,9 +63,15 @@
           <h5>{{Experiencia.nombreE}}</h5>
           <h6>{{Experiencia.localidadE}}</h6>
           <p>{{Experiencia.descripcionE}}</p>
-          <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged"><i class="fa-solid fa-pen-to-square"></i> EDITAR</button>
+          <div *ngIf="isLogged">
+            <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR</button>
 
-          <button class="btn btn-danger" *ngIf="isLogged">BORRAR</button>
+            <button class="btn btn-danger" (click)="delete(Experiencia.id)"><i class="fa-solid fa-trash fa-sm"></i> BORRAR</button>
+          </div>
+          <div *ngIf="showAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Experiencia eliminada.</strong>
+            <button type="button" class="btn-close" (click)="closeAlert()" aria-label="Close"></button>
+          </div>
         </div>
 
       </div>

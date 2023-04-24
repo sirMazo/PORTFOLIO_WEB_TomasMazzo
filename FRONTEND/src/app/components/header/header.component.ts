@@ -11,6 +11,8 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
+  
+  // LOGIN
   isLogged = false;
   isLogginFail = false;
   loginUsuario!: LoginUsuario;
@@ -18,6 +20,9 @@ export class HeaderComponent implements OnInit{
   password!: string;
   roles: string[] = [];
   errMsj!: string;
+
+  // BARRA DE NAVEGACIÓN
+  isNavbarFixed = false;
 
   constructor(
     private elementRef: ElementRef,
@@ -71,8 +76,13 @@ export class HeaderComponent implements OnInit{
     element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Aquí se puede agregar codigo cuando se desplace ...
+    const offset = window.scrollY;
+    if (offset > 70) {
+      this.isNavbarFixed = true;
+    } else {
+      this.isNavbarFixed = false;
+    }
   }
 }

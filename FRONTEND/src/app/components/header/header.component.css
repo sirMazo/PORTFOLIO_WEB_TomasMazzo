@@ -1,16 +1,32 @@
 * {
   font-family: 'Oswald', sans-serif;
   color: #fff;
-  background-color: #1e2326;
 }
 
-/* Estilo para el navbar */
-.navbar {
+
+/* Estilos dependiendo la pos del navbar */
+.navbar-fixed-top{
   background-color: #1e2326;
-  width:  100%;
   position: fixed;
   z-index: 99;
+  top: 8px;
+  left: 18px;
+  right: 18px;
+  border-radius: 0; /* Anulado */
+  transition: all 0.2s ease-in-out;
+  border-radius: 20px;
 }
+
+.navbar-scroll{
+  background-color: #1e2326;
+  position: fixed;
+  z-index: 99;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  transition: all 0.2s ease-in-out;
+}
+
 
 /* Estilo para el logo */
 .navbar-brand img {
@@ -30,8 +46,8 @@
 }
 
 .navbar-nav .nav-link {
-  padding: 0 15px;
-  font-size: 700;
+  padding: 0 10px;
+  font-size: 18px;
   color: rgb(255, 255, 255);
   text-decoration: none;
   transition: all 0.1s;
@@ -85,7 +101,9 @@
   transition: 0s;  
 }
 
-
+.offcanvas{
+  background-color: #1e2326;
+}
 /* Estilo para el modal del botón de inicio de sesión */
 .modal{
   background: none repeat scroll;
@@ -145,13 +163,14 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 767px){
   .primer{
     display: none !important;
   }
 
   .navbar-nav{
     margin-right: 10px;
+
   }
   
   .navbar-nav .nav-link {
