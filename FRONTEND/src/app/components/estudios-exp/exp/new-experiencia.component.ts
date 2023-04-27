@@ -29,9 +29,13 @@ export class NewExperienciaComponent implements OnInit {
         this.router.navigate(['']);
       }, err => {
         alert("Falló la creación de experiencia laboral (onCreate())");
-        this.router.navigate(['']);
+        this.router.navigateByUrl('/'); // Navega a la página de inicio
       }
     )
+  }
+
+  cancelar(): void {
+    this.router.navigateByUrl('/');
   }
 
 }

@@ -4,10 +4,11 @@
     color: white;
   }
   
-  .form-group {
-    margin-bottom: 1rem;
-  }
+.form-group {
+  margin-bottom: 1rem;
+}
   
-  .btn {
-    margin-right: 1rem;
-  }
+.btn {
+  margin-right: 1rem;
+  margin-top: 10px;
+}

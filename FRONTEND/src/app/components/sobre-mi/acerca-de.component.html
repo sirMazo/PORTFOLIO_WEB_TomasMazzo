@@ -1,70 +1,11 @@
 <section id="acercaDe" class="acercaDe">
-    <div class="col">
+    <div class="col" *ngFor="let sm of sobreMi">
         <div class="contenido-acercaDe">
             <h2>Sobre mí</h2>
-            <p>¡Hola! <span>Mi nombre es Tomás</span>, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis laborum dolorum vitae, obcaecati sapiente cum nam autem fugiat unde distinctio nihil debitis labore! Ipsum, delectus odit quis porro ut quas Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, pariatur eos veritatis cupiditate eius officiis ex sequi ratione? Earum quia ducimus itaque quibusdam quasi commodi sunt totam porro reiciendis quam? </p>
+            <p>¡Hola! <span>Mi nombre es Tomás</span>, {{sm.textoSM}} </p>
         </div>
+        <button *ngIf="isLogged" class="btn btn-light" routerLink="/editsobremi/{{sm.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR TEXTO</button>
+
     </div>
 
-    <!-- Intereses 
-    <div class="col"> 
-        <h3>Intereses</h3>
-        <div class="contenedor-intereses">
-            <div class="mini-tarjeta">
-                <div class="intereses">
-                <i class="fa-solid fa-gamepad"></i>
-                <span>JUEGOS</span>
-                </div>
-            </div>
-            <div class="mini-tarjeta">
-                <div class="intereses">
-                <i class="fa-solid fa-briefcase"></i>
-                <span>TRABAJAR</span>
-                </div>
-            </div>
-            <div class="mini-tarjeta">
-                <div class="intereses">
-                <i class="fa-solid fa-code"></i>
-                <span>PROGRAMAR</span>
-                </div>
-            </div>
-            <div class="mini-tarjeta">
-                <div class="intereses">
-                <i class="fa-solid fa-volleyball"></i>
-                <span>VOLLEYBALL</span>
-                </div>
-            </div>
-            <div class="mini-tarjeta">
-                <div class="intereses">
-                <i class="fa-solid fa-music"></i>
-                <span>MÚSICA</span>
-                </div>
-            </div>
-            <div class="mini-tarjeta">
-                <div class="intereses">
-                <i class="fa-solid fa-dumbbell"></i>
-                <span>GYM</span>
-                </div>
-            </div>
-            <div class="mini-tarjeta">
-                <div class="intereses">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <span>ESTUDIAR</span>
-                </div>
-            </div>
-            <div class="mini-tarjeta">
-                <div class="intereses">
-                    <i class="fa-solid fa-plane"></i>
-                <span>VIAJAR</span>
-                </div>
-            </div>
-            <div class="mini-tarjeta">
-                <div class="intereses">
-                    <i class="fa-solid fa-list-check"></i>
-                <span>PROGRESAR</span>
-                </div>
-            </div>
-           
-        </div>
-    </div> -->
 </section>

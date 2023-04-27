@@ -1,27 +1,23 @@
 <div class="background">
     <div class="">
         
-        <div class="columna">
+        <div class="columna"  *ngFor="let Perfil of perfil" >
             <div class="cards card-one">
                 <div class="Informacion">
                     <img src="../../../assets/images/fotoPerfil.jpg" class="img-fluid">
-                    <h6> {{persona.nombre}} {{persona.apellido}}</h6>
-                    <p id="arroba">@sirM</p>
+                    <h6> {{Perfil.nombreP}} {{Perfil.apellidoP}}</h6>
+                    <p id="arroba">@{{Perfil.apodoP}}</p>
                 </div>
                 <div class="titulos">
-                    <ul>
-                        <li>
-                            <p><i class="fa-solid fa-circle circle"></i> {{persona.titulo}}</p>
-                        </li>
-                        <li>
-                            <p><i class="fa-solid fa-circle circle"></i> Programador JR</p>
-                        </li>
-                    </ul>
+                    <div class="titulos" *ngFor="let t of titulo">
+                        <p><i class="fa-solid fa-circle circle"> </i>{{ t.nombreT }}</p>
+                    </div>
                 </div>
             </div>
+            <button *ngIf="isLogged" class="btn btn-light" routerLink="/editperfil/{{Perfil.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR PERFIL</button>
         </div>
 
-        <div class="columna">
+        <div class="columna" *ngFor="let Contacto of contacto" >
             <div class="cards card-two">
                 <div class="social">
                     <h5>Redes sociales</h5>
@@ -47,20 +43,21 @@
                     </nav>
                 </div>
         
-                <div class="contacto">
+                <div class="contacto" >
                     <h5>Contacto</h5>
                     <ul>
                         <li>
                             <strong>Teléfono</strong>
-                            +54 9 11 3170-6245
+                            {{Contacto.telefonoC}}
                         </li>
                         <li>
                             <strong>Email</strong>
-                            mazzotomas3@gmail.com
+                            {{Contacto.emailC}}
                         </li>
                         <li>
                             <strong>Website</strong>
-                            www.estaweb.com
+                            <a href=" " class="enlace">www.estaweb.com</a>
+
                         </li>
                     </ul>
                 </div>
@@ -69,6 +66,8 @@
                     <span class="overlay"></span>
                 </button>
             </div>
+            <button *ngIf="isLogged" class="btn btn-light" routerLink="/editcontacto/{{Contacto.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR ZONA DE CONTACTO</button>
+
         </div>
     </div>
 </div>

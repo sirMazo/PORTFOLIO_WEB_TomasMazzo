@@ -4,7 +4,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
-    color: #fff;  
+
 }
 
 /* COLOCAR BANNER DE FONDO */
@@ -33,13 +33,22 @@
     padding: 20px;
     text-align: center;
     transition: 0.1s;
-    height: 360px;
+    height: 380px;
+
 
 }.cards:hover {
     box-shadow: 0 18px 26px rgba(0, 0, 0, 0.390); 
     transform: translateY(-3px) scale(1.005) translateZ(0);
 }
 
+.btn-light{
+    margin-top: 30px;
+    margin-left: 5px;
+    transition: 0.1s;
+}
+.btn-light:hover {
+    transform: translateY(-2px) translateZ(0);
+}
 
 /* STYLE IMAGEN */
 .card-one img{
@@ -60,37 +69,33 @@
 }
 
 #arroba {
-    font-weight: normal;
-    font-size: 15px;
+    text-align: left;
     margin-top: -10px;
-    margin-right: 79px;
+    margin-left: 92px;
     color: rgb(112, 112, 112);
 
 }
 
 /* TITULOS */
-.card-one .titulos ul {
-    list-style-type: none;
-    padding: 4px;
-    display:inline-flex;
-}
-  
-.card-one .titulos li {
-    padding: 3px;
-    font-size: 13px;
-    transition: 0.1s;
-    cursor: pointer;
-
-
-}.card-one .titulos li:hover {
-    transform: scale(1.1);
+.card-one .titulos {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .card-one .titulos p {
+    align-items: center;
     color: rgb(255, 255, 255);
+    font-size: 13px;
     padding: 0px 10px;
     background: #2e353a;
     border-radius: 10px;
+    margin: 5px;
+    transition: 0.1s;
+}
+
+.card-one .titulos p:hover {
+    transform: scale(1.03);
 }
   
 .card-one .titulos .circle {
@@ -124,6 +129,11 @@
     cursor: pointer;
     transition: 0.3s;
 }
+.enlace {
+    color: #fff;
+    transition: all 0.3s ;
+}
+
 
 /* STYLES ÍCONOS */
 .fa-github,
@@ -137,23 +147,20 @@
 .fa-linkedin:hover,
 .fa-linkedin:focus {
   color: #0a66c2;
-  transform: scale(1.1);
 }
 .fa-twitter:hover,
 .fa-twitter:focus {
   color: #00acee;
-  transform: scale(1.1);
 }
 .fa-instagram:hover,
 .fa-instagram:focus {
   color: #bd22a2;
-  transform: scale(1.1);
 }
 
 .fa-github:hover,
 .fa-github:focus {
   color: #000;
-  transform: scale(1.2);
+
 }
 
 /* CONTACTO */
@@ -192,6 +199,7 @@
 .card-two button {
     cursor: pointer;
     background-color: transparent;
+    color: #ffffff;
     border: 2px solid #ffffff;
     font-size: 16px;
     margin-top: 30px;

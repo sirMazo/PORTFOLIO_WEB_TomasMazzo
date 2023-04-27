@@ -127,16 +127,18 @@
 
 .btn-primary {
   border-color: #ffd900;
-  color: #fff;
-}
-
-.btn-primary:hover{
   background: #ffd900;
   color: #1e2326;
 }
 
-.btn-primary:active{
+.btn-primary:hover{
   border-color: #fff;
+  background: #fff;
+  color: #1e2326;
+}
+
+.btn-primary:active{
+  border-color: #7a7a7a;
   background-color: #fff;
 }
 

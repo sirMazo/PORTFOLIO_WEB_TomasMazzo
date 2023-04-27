@@ -57,7 +57,7 @@ public class CExperiencia {
             return new ResponseEntity(new Mensaje("El ID no existe."), HttpStatus.BAD_REQUEST);
         }
 
-        response.setHeader("Access-Control-Allow-Origin", "*"); // Agregamos la línea de código
+        response.setHeader("Access-Control-Allow-Origin", "*");
         sExperiencia.delete(id);
         return new ResponseEntity(new Mensaje("Experiencia eliminada."), HttpStatus.OK);
     }

@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { AcercaDeComponent } from './components/sobre-mi/acerca-de.component';
 import { InicioComponent } from './components/inicio/inicio.component';
-import { EstudiosComponent } from './components/estudios-exp/estudios-exp.component';
+import {  EstudiosExp } from './components/estudios-exp/estudios-exp.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { NewExperienciaComponent } from './components/estudios-exp/exp/new-experiencia.component';
 
@@ -27,6 +27,12 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { interceptorProvider } from './services/interceptor-service';
 import { EditExperienciaComponent } from './components/estudios-exp/exp/edit-experiencia.component';
+import { NewEducacionComponent } from './components/estudios-exp/estudios/new-educacion.component';
+import { EditEducacionComponent } from './components/estudios-exp/estudios/edit-educacion.component';
+import { EditPerfilComponent } from './components/inicio/perfil/edit-perfil.component';
+import { NewTituloComponent } from './components/inicio/perfil/titulos/new-titulo.component';
+import { EditContactoComponent } from './components/inicio/contacto/edit-contacto.component';
+import { EditAcercaDeComponent } from './components/sobre-mi/edit-acerca-de/edit-acerca-de.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +40,19 @@ import { EditExperienciaComponent } from './components/estudios-exp/exp/edit-exp
     HeaderComponent,
     AcercaDeComponent,
     InicioComponent,
-    EstudiosComponent,
+    EstudiosExp,
     NewExperienciaComponent,
     SkillsComponent,
     ProyectosComponent,
     FooterComponent,
     HomeComponent,
     EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    EditPerfilComponent,
+    NewTituloComponent,
+    EditContactoComponent,
+    EditAcercaDeComponent,
   ],
   imports: [
     BrowserModule,

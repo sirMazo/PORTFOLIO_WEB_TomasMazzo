@@ -15,10 +15,12 @@
                     <input type="text" class="form-control" id="localidadE" name="localidadE" [(ngModel)]="localidadE" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcionE">Descripción</label>
+                    <label for="descripcionE">Descripción (max. 255)</label>
                     <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
                 </div>
                 <button class="btn btn-success">Agregar experiencia</button>
+                <button class="btn btn-danger" (click)="cancelar()">Cancelar</button>
+
             </form>
         </div>
     </div>
